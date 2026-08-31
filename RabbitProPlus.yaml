@@ -1,0 +1,212 @@
+# https://mihomo.party/docs/guide/override/yaml
+# 更新订阅后记得在订阅配置里的 Proxy 组加上 "🇺🇸US" 选项
+rule-providers:
+  GitHub:
+    type: http
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/GitHub/GitHub.yaml
+    path: ./ruleset/GitHub.yaml
+    interval: 86400
+  OneDrive:
+    type: http
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/OneDrive/OneDrive.yaml
+    path: ./ruleset/OneDrive.yaml
+    interval: 86400
+  Bing:
+    type: http
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Bing/Bing.yaml
+    path: ./ruleset/Bing.yaml
+    interval: 86400
+  Copilot:
+    type: http
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Copilot/Copilot.yaml
+    path: ./ruleset/Copilot.yaml
+    interval: 86400
+  Anthropic:
+    type: http
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Anthropic/Anthropic.yaml
+    path: ./ruleset/Anthropic.yaml
+    interval: 86400
+  OpenAI:
+    type: http
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/OpenAI/OpenAI.yaml
+    path: ./ruleset/OpenAI.yaml
+    interval: 86400
+  Gemini:
+    type: http
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Gemini/Gemini.yaml
+    path: ./ruleset/Gemini.yaml
+    interval: 86400
+  X:
+    type: http
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Twitter/Twitter.yaml
+    path: ./ruleset/X.yaml
+    interval: 86400
+  YouTube:
+    type: http
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/YouTube/YouTube.yaml
+    path: ./ruleset/YouTube.yaml
+    interval: 86400
+  YouTubeMusic:
+    type: http
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/YouTubeMusic/YouTubeMusic.yaml
+    path: ./ruleset/YouTubeMusic.yaml
+    interval: 86400
+
++rules:
+  - "DOMAIN-SUFFIX,nju.edu.cn,DIRECT"
+  - "DOMAIN-KEYWORD,cycani.org,🇭🇰HK"
+
+  # Microsoft service
+  - RULE-SET,GitHub,🇭🇰HK
+  - RULE-SET,OneDrive,🇭🇰HK
+  - RULE-SET,Bing,🇺🇸US
+  - RULE-SET,Copilot,🇺🇸US
+  # - DOMAIN-SUFFIX,sharepoint.com,🇭🇰HK
+  # - DOMAIN-SUFFIX,microsoft.com,🇭🇰HK
+
+  # AI
+  - RULE-SET,Anthropic,🇯🇵JP
+  - RULE-SET,OpenAI,🇺🇸US
+  - RULE-SET,Gemini,🇺🇸US
+  - "DOMAIN-KEYWORD,openrouter,🇯🇵JP"
+  # - "DOMAIN-SUFFIX,gemini.google.com,OpenAI"
+  # - "DOMAIN-SUFFIX,claude.ai,🇯🇵JP"
+  # - "DOMAIN-SUFFIX,anthropic.com,🇯🇵JP"
+
+  # JP service
+  - "DOMAIN-SUFFIX,cystore.com,🇯🇵JP"
+  - "DOMAIN-SUFFIX,buyee.jp,🇯🇵JP"
+  - "DOMAIN-SUFFIX,dmm.com,🇯🇵JP"
+  - "DOMAIN-KEYWORD,cygames,🇯🇵JP"
+  - "DOMAIN-KEYWORD,umamusume,🇯🇵JP"
+
+  - "DOMAIN-SUFFIX,merpay.com,🇯🇵JP"
+  - "DOMAIN-KEYWORD,mercari,🇯🇵JP"
+  - "DOMAIN-SUFFIX,static.mercdn.net,🇯🇵JP"
+  - "DOMAIN-KEYWORD,eplus,🇯🇵JP"
+  - "DOMAIN-SUFFIX,pixiv.net,🇯🇵JP"
+  - "DOMAIN-SUFFIX,fanbox.cc,🇯🇵JP"
+  - "DOMAIN-SUFFIX,jp,🇯🇵JP"
+
+  - "DOMAIN-SUFFIX,bangumi.tv,🇯🇵JP"
+  
+  # X
+  - RULE-SET,X,🇯🇵JP
+  # - "DOMAIN-SUFFIX,x.com,🇯🇵JP"
+  # - "DOMAIN-SUFFIX,twitter.com,🇯🇵JP"
+  # - "DOMAIN-SUFFIX,t.co,🇯🇵JP"
+  # - "DOMAIN-SUFFIX,twimg.com,🇯🇵JP"
+
+  # Youtube
+  - RULE-SET,YouTube,🇯🇵JP
+  - RULE-SET,YouTubeMusic,🇯🇵JP
+  # - DOMAIN-KEYWORD,youtube,🇯🇵JP
+  # - DOMAIN,youtubei.googleapis.com,🇯🇵JP
+  # - DOMAIN,yt3.ggpht.com,🇯🇵JP
+  # - DOMAIN-SUFFIX,googlevideo.com,🇯🇵JP
+  # - DOMAIN-SUFFIX,gvt2.com,🇯🇵JP
+  # - DOMAIN-SUFFIX,withyoutube.com,🇯🇵JP
+  # - DOMAIN-SUFFIX,youtu.be,🇯🇵JP
+  # - DOMAIN-SUFFIX,youtube-nocookie.com,🇯🇵JP
+  # - DOMAIN-SUFFIX,youtube.com,🇯🇵JP
+  # - DOMAIN-SUFFIX,youtubeeducation.com,🇯🇵JP
+  # - DOMAIN-SUFFIX,youtubegaming.com,🇯🇵JP
+  # - DOMAIN-SUFFIX,youtubekids.com,🇯🇵JP
+  # - DOMAIN-SUFFIX,yt.be,🇯🇵JP
+  # - DOMAIN-SUFFIX,ytimg.com,🇯🇵JP
+  # - DOMAIN,music.youtube.com,🇯🇵JP
+
++proxy-groups:
+-
+  name: 🇯🇵JP
+  type: select
+  # type: url-test
+  interval: 1800
+  tolerance: 50
+  proxies:
+    - '🇯🇵 A0013 日本'
+    - "🇯🇵 A0014 日本"
+    - '🇯🇵 A0015 日本'
+    - '🇯🇵 B1021 日本'
+    - '🇯🇵 B1022 日本'
+    - '🇯🇵 B1023 日本'
+    - '🇯🇵 B1024 日本'
+-
+  name: 🇺🇸US
+  type: select
+  # type: url-test
+  interval: 1800
+  tolerance: 50
+  proxies:
+    - '🇺🇸 A0016 美国'
+    - '🇺🇸 A0017 美国'
+    - '🇺🇸 A0018 美国'
+    - '🇺🇸 B1013 美国'
+    - '🇺🇸 B1014 美国'
+    - '🇺🇸 B1015 美国'
+    - '🇺🇸 B1016 美国'
+-
+  name: 🇭🇰HK
+  type: select
+  # type: url-test
+  interval: 1800
+  tolerance: 50
+  proxies:
+    - '🇭🇰 A0001 香港'
+    - '🇭🇰 A0002 香港'
+    - '🇭🇰 A0003 香港'
+    - '🇭🇰 A0004 香港'
+    - '🇭🇰 A0005 香港'
+    - '🇭🇰 A0006 香港'
+    - '🇭🇰 A0007 香港家宽'
+    - '🇭🇰 A0008 香港家宽'
+    - 'B1001 官网:rabbitpro.sg'
+    - '🇭🇰 B1002 香港'
+    - '🇭🇰 B1003 香港'
+    - '🇭🇰 B1004 香港'
+    - '🇭🇰 B1005 香港'
+    - '🇭🇰 B1006 香港'
+    - '🇭🇰 B1007 香港家宽'
+    - '🇭🇰 B1008 香港家宽'
+-
+  name: 🇨🇳TW
+  type: select
+  proxies:
+    - "🇨🇳 A0019 台湾"
+    - '🇨🇳 A0020 台湾'
+    - '🇨🇳 A0021 台湾'
+    - '🇨🇳 B1017 台湾'
+    - '🇨🇳 B1018 台湾'
+    - '🇨🇳 B1019 台湾家宽'
+    - '🇨🇳 B1020 台湾家宽'
+-
+  name: 🇸🇬SG
+  type: select
+  proxies:
+    - '🇸🇬 A0009 新加坡'
+    - '🇸🇬 A0010 新加坡'
+    - '🇸🇬 A0011 新加坡'
+    - '🇸🇬 B1009 新加坡'
+    - '🇸🇬 B1010 新加坡'
+    - '🇸🇬 B1011 新加坡'
+    - '🇸🇬 B1012 新加坡'
