@@ -111,10 +111,10 @@ rule-providers:
   - "DOMAIN-SUFFIX,bangumi.tv,🇯🇵JP"
   
   # X
-  - RULE-SET,X,🇯🇵JP
-  # - "DOMAIN-SUFFIX,x.com,🇯🇵JP"
-  # - "DOMAIN-SUFFIX,twitter.com,🇯🇵JP"
-  # - "DOMAIN-SUFFIX,t.co,🇯🇵JP"
+  # - RULE-SET,X,🇯🇵JP
+  - "DOMAIN-SUFFIX,x.com,🇯🇵JP"
+  - "DOMAIN-SUFFIX,twitter.com,🇯🇵JP"
+  - "DOMAIN-SUFFIX,t.co,🇯🇵JP"
   # - "DOMAIN-SUFFIX,twimg.com,🇯🇵JP"
 
   # Youtube
